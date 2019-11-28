@@ -20,7 +20,22 @@ The Simplest way to use Dig is `dig hostname` without extra arguments. If So you
 
 ![](https://tva1.sinaimg.cn/large/006y8mN6gy1g9dyxwboq8j30u01ds7bv.jpg)
 
-The output is carefully commented， splited into six parts by new line. What we really care about is the "ANSWER SECTION".
+The output is carefully commented， splited into six parts by new line. What we really care about is the "ANSWER SECTION". There are five fields of the ANSWER SECTION in dig query, Let me explain that for you.
+
+- The First field is domain name.
+- The second one is TTL(Time To Alive)
+- The third one is class(In for internet)
+- And the Record Type filed.
+
+The Record Type such as "CNAME", "A", "NS".
+
+- A for "pointing to a IP addr"
+- CNAME for "pointing to another domain"
+- NS for "pointing to anoter DNS Server"
+
+for more, please visite [DNS Record types](https://simpledns.com/help/dns-record-types)
+
+- Last One is IP Addr.
 
 2. dig -x ip to Querying DNS Reverse Look-up.
 
@@ -39,19 +54,21 @@ As I Claimed, Usaully what we really care about the "ANSWER SECTION", "+short" r
 
 1. trace
 2. specify DNS Server
-3. custom your own output format
 
-## Reference
+if not specified, It will read the dns server specified at `/etc/resolv.conf` line by line.
 
-### Dimain Record Type
+my file `/etc/resolv.conf`:
 
-The Record Type such as "CNAME", "A", "NS".
+```
+nameserver 192.168.2.5
+nameserver 202.101.172.35
+```
 
-- A for "pointing to a IP addr"
-- CNAME for "pointing to another domain"
-- NS for "pointing to anoter DNS Server"
+You can explicitly specify the dns sever by inputing the dns server ip startingwith @ symbol. like this:
 
-for more, please visite [DNS Record types](https://simpledns.com/help/dns-record-types)
+```bash
+dig @114.114.114.144 lucifer.ren
+```
 
 ## Trick
 
@@ -61,6 +78,6 @@ for more, please visite [DNS Record types](https://simpledns.com/help/dns-record
 ifconfig | grep 'inet\b'
 ```
 
-## Read More
+## Reference
 
 - [10-linux-dig-domain-information-groper-commands-to-query-dns](https://www.tecmint.com/10-linux-dig-domain-information-groper-commands-to-query-dns/)
