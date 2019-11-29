@@ -2,7 +2,23 @@
 
 ## IfConfig
 
-TODO
+IfConfig is a command line tool used to configure network interfaces.
+
+## Simple Usage
+
+Generally, It can be used for:
+
+1. View NetWork data
+
+2. Configure Network interfaces
+
+## Trick
+
+- lookup ipv4 addr
+
+```bash
+ifconfig | grep 'inet\b'
+```
 
 ## Dig
 
@@ -14,7 +30,7 @@ Dig is yet another command line tool, which is much similar to Linux `Nslook`.Di
 
 ## Simple Usage
 
-1. dig hostname
+### dig hostname
 
 The Simplest way to use Dig is `dig hostname` without extra arguments. If So you will See the output below: (eg: `dig lucifer.ren`)
 
@@ -22,10 +38,10 @@ The Simplest way to use Dig is `dig hostname` without extra arguments. If So you
 
 The output is carefully commented， splited into six parts by new line. What we really care about is the "ANSWER SECTION". There are five fields of the ANSWER SECTION in dig query, Let me explain that for you.
 
-- The First field is domain name.
-- The second one is TTL(Time To Alive)
-- The third one is class(In for internet)
-- And the Record Type filed.
+1. The First field is domain name.
+2. The second one is TTL(Time To Alive)
+3. The third one is class(In for internet)
+4. And the Record Type filed.
 
 The Record Type such as "CNAME", "A", "NS".
 
@@ -35,9 +51,9 @@ The Record Type such as "CNAME", "A", "NS".
 
 for more, please visite [DNS Record types](https://simpledns.com/help/dns-record-types)
 
-- Last One is IP Addr.
+5. Last One is IP Addr.
 
-2. dig -x ip to Querying DNS Reverse Look-up.
+### dig -x ip to Querying DNS Reverse Look-up.
 
 eg:
 
@@ -46,9 +62,9 @@ dig -x 216.239.34.10 +short
 # Output: ns2.google.com.
 ```
 
-3. +short
+### "+short" for brief info
 
-As I Claimed, Usaully what we really care about the "ANSWER SECTION", "+short" rocks.
+As I Claimed, Usaully what we really care about the "ANSWER SECTION", "+short" can help.
 
 ## Advanced Usage
 
@@ -68,14 +84,6 @@ You can explicitly specify the dns sever by inputing the dns server ip startingw
 
 ```bash
 dig @114.114.114.144 lucifer.ren
-```
-
-## Trick
-
-- lookup ipv4 addr
-
-```bash
-ifconfig | grep 'inet\b'
 ```
 
 ## Reference
