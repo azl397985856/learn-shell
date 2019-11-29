@@ -10,7 +10,7 @@ Generally, It can be used for:
 
 #### View NetWork data
 
-The Simplest way to use `ifconfig` is `ifconfig` itself with any parameters. It will show you details of the network interfaces which are running in your computer. Also, i's the major part of the `ifconfig` command.
+The Simplest way to use `ifconfig` is `ifconfig` itself without any parameters. It will show you details of the network interfaces which are running in your computer. Also, i's the major part of the `ifconfig` command.
 
 eg:
 
