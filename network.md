@@ -84,6 +84,10 @@ ifconfig | grep 'inet\b'
 
 Dig is yet another command line tool, which is much similar to Linux `Nslook`.Dig is short for `Domain Information Groper`, It's a network tool for querying DNS(Domain Name System) info which is avaliable in marjor Linux distributions. When you have trouble with DNS, it's a good choice to use it.
 
+The domain namespace is a tree structure. Each node on the tree corresponds to a resource set. The name of the root is the empty string (" ") generally denoted with a dot (.):
+
+![](https://tva1.sinaimg.cn/large/006tNbRwgy1g9i84dtk98j30y80ggmxq.jpg)
+
 ### Simple Usage
 
 #### dig hostname
