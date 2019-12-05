@@ -149,3 +149,35 @@ dig @114.114.114.144 lucifer.ren
 ### Reference
 
 - [10-linux-dig-domain-information-groper-commands-to-query-dns](https://www.tecmint.com/10-linux-dig-domain-information-groper-commands-to-query-dns/)
+
+### PING
+
+PING is also a frequently used command line. PING Send a ICMP Packet "ECHO_REQUEST" to the destination which we specified. For example. we enter `ping 192.168.2.1`, actually we just send a ICMP packet to '192.168.2.1'. If '192.168.2.1' recieved the packet, it will send back a ICMP packet (but not guaranteed).If you disable the ICMP, no ICMP packet sended back.Specially, if you ping the broadcast address with ICMP enabled, all the devices will send the ICMP packet.For example:
+
+```bash
+64 bytes from 192.168.7.176: icmp_seq=6 ttl=64 time=120.911 ms
+64 bytes from 192.168.4.103: icmp_seq=6 ttl=64 time=122.303 ms
+64 bytes from 192.168.7.192: icmp_seq=6 ttl=64 time=122.463 ms
+64 bytes from 192.168.6.43: icmp_seq=6 ttl=64 time=122.479 ms
+64 bytes from 192.168.7.159: icmp_seq=6 ttl=64 time=123.241 ms
+64 bytes from 192.168.7.169: icmp_seq=6 ttl=64 time=123.252 ms
+64 bytes from 192.168.5.136: icmp_seq=6 ttl=64 time=125.038 ms
+64 bytes from 192.168.4.89: icmp_seq=6 ttl=64 time=135.750 ms
+64 bytes from 192.168.7.109: icmp_seq=6 ttl=64 time=176.049 ms
+```
+
+
+### traceroute
+
+Also, traceroute is based on ICMP.
+
+### netstat
+
+```bash
+netstat -ntlp
+```
+
+
+## ARP
+
+absent
