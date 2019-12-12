@@ -5,7 +5,7 @@ Executes a single command as the superuser or another user.
 - Run a command as the superuser:
 
 ```bash
-# sudo less /var/log/syslog
+$ sudo less /var/log/syslog
 ```
 
 - Edit a file as the superuser with your default editor:
