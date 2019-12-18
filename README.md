@@ -10,7 +10,11 @@ You can Fork this repo and custom your own learning roadmap
 
 ## GuidLine
 
-- [NetWork Management](./network.md)
+- [NetWork](./network.md)
+- [Files](./files.md)
+- [pip&redirect](./pip&redirect.md) (中文)
+- [SSH](./SSH.md)
+- [sudo](./sudo.md)
 
 ## Licence
 
