@@ -15,6 +15,7 @@ You can Fork this repo and custom your own learning roadmap
 - [pip&redirect](./pip&redirect.md) (中文)
 - [SSH](./SSH.md)
 - [sudo](./sudo.md)
+- [jobs](./jobs.md)
 
 ## Licence
 
