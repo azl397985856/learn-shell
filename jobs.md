@@ -91,6 +91,15 @@ $ kill -l | wc -w
 31	SIGSYS	系统调用异常
 ```
 
+因此 `kill -9 pid` 实际上就是发送了一个 KILL 信号，而且这个信号实际上是不能被忽略的，也就说会立即停止。当然你如果不嫌麻烦的话你也可以：
+
+```bash
+kill -s KILL pid
+kill -s 9 pid
+```
+
+效果是一样的。
+
 ## setsid
 
 set shell id 的缩写。其会在一个新的会话中运行命令，从而可以避免当前终端发出的 HUP 信号造成的影响。
@@ -120,3 +129,4 @@ exit //进入指定会话后执行 exit 即可关闭该会话。
 
 - [Linux 运行与控制后台进程的方法：nohup, setsid, &, disown, screen](https://www.cnblogs.com/itech/archive/2012/09/16/2687404.html)
 - [Linux 信号(signal)机制](http://gityuan.com/2015/12/20/signal/)
+- [unix-kill](https://shapeshed.com/unix-kill/)
