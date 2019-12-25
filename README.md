@@ -17,6 +17,7 @@ You can Fork this repo and custom your own learning roadmap
 - [sudo](./sudo.md)
 - [jobs](./jobs.md) （中文）
 - [grep](./grep.md) （中文）
+- [xargs](./xargs.md) （中文）
 
 ## Licence
 
