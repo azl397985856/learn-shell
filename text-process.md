@@ -13,12 +13,15 @@
   wc -l file
 
 - 计算单词数:
+
   wc -w file
 
 - 计算字节数:
+
   wc -c file
 
 - 计算字节数 (会考虑多字节):
+
   wc -m file
   
 常和管道等搭配使用 ，比如 `cat ./a.js | grep 'function' | wc -l`
