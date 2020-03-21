@@ -27,6 +27,7 @@ learn shell step by step. You can Fork this repo and custom your own learning ro
 - [jobs](./jobs.md) （中文）
 - [grep](./grep.md) （中文）
 - [xargs](./xargs.md) （中文）
+- [log](https://www.eurovps.com/blog/important-linux-log-files-you-must-be-monitoring/)
 
 ## Licence
 
