@@ -70,7 +70,7 @@
 
 - 显示出现次数:
   sort file | uniq -c
-
+```
 ## awk
 
 ### 作用
