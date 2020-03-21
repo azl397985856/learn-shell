@@ -8,16 +8,17 @@
 
 ### 常见用法
 
-- Count lines in file:
+- 计算行数:
+
   wc -l file
 
-- Count words in file:
+- 计算单词数:
   wc -w file
 
-- Count characters (bytes) in file:
+- 计算字节数:
   wc -c file
 
-- Count characters in file (taking multi-byte character sets into account):
+- 计算字节数 (会考虑多字节):
   wc -m file
   
 常和管道等搭配使用 ，比如 `cat ./a.js | grep 'function' | wc -l`
